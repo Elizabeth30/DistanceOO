@@ -21,7 +21,18 @@ int main(int argc, const char * argv[]) {
         if ( [p2 distance: p1] !=1) {
             NSLog(@"Incorrect");
         }
-        
+        p2=[p2 init: 2 y:0];
+        if ( [p2 distance: p1] !=2) {
+            NSLog(@"Incorrect");
+        }
+        p2=[p2 init: 0 y:1];
+        if ([p2 distance: p1]-1.41>0.05){
+            NSLog(@"Incorrect");
+        }
+        p2=[p2 init: 0 y:3];
+        if ([p2 distance: p1]-4.24>0.05){
+            NSLog (@"Incorrect");
+        }
         
         
         
